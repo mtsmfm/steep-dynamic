@@ -6,4 +6,6 @@ RUN apt-get update -q && apt-get install -y less zsh curl gnupg
 
 WORKDIR /app
 
+ENV BUNDLE_PATH=/app/vendor/bundle
+
 USER app

@@ -1,5 +1,9 @@
 require "bundler/setup"
-require "app"
+$LOAD_PATH << Pathname(Gem.bin_path('steep', 'steep')).join('../../vendor/ruby-signature/lib')
+Bundler.require
+
+require "steep"
+require "steep/cli"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
